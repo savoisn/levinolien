@@ -47,6 +47,4 @@ WORKDIR /appli/
 ENV PORT 8080
 ENV MIX_ENV prod
 
-RUN mix deps
-
 CMD /appli/entrypoint.sh 
