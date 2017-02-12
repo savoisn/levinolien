@@ -1,0 +1,6 @@
+<h2>Signez la pétition:</h2>
+
+<%= render "form.html", changeset: @changeset,
+                        action: signature_path(@conn, :create) %>
+
+<%= link "Back", to: signature_path(@conn, :index) %>

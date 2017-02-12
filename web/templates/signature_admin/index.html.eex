@@ -1,0 +1,32 @@
+<h2>Listing signatures</h2>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Firstname</th>
+      <th>Lastname</th>
+      <th>Email</th>
+      <th>Adress</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for signature <- @signatures do %>
+    <tr>
+      <td><%= signature.firstname %></td>
+      <td><%= signature.lastname %></td>
+      <td><%= signature.email %></td>
+      <td><%= signature.adress %></td>
+
+      <td class="text-right">
+        <%= link "Show", to: signature_admin_path(@conn, :show, signature), class: "btn btn-default btn-xs" %>
+        <%= link "Edit", to: signature_admin_path(@conn, :edit, signature), class: "btn btn-default btn-xs" %>
+        <%= link "Delete", to: signature_admin_path(@conn, :delete, signature), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-danger btn-xs" %>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<%= link "New signature", to: signature_admin_path(@conn, :new) %>

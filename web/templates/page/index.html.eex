@@ -1,0 +1,80 @@
+<div class="row marketing" style="">
+  <div class="text-center">
+      <a class="btn btn-lg btn-danger" href="<%= signature_path(@conn, :new) %>">Signer la pétition</a>
+  </div>
+
+  <br/>
+  <div class="col-lg-12">
+    <h2>PETITION</h2>
+    <span>
+    À l&#39;attention de Monsieur le Directeur Académique des Services de l&#39;Education Nationale.
+    </span>
+    <br/>
+    <br/>
+    <h3>OBJET : Mobilisation contre la fermeture d&#39;une classe à l&#39;école de Vineuil Saint Firmin.</h3>
+    <br/>
+    </p><p>
+      Nous refusons que des calculs froids et technocratiques conditionnent la qualité de vie à l&#39;école de 
+      nos enfants.
+    </p><p>
+      La fermeture d'une classe aurait pour conséquences pour nos enfants :
+    </p>
+    <ul>
+    <li>
+      <strong>Classes surchargées</strong> avec plus de 30 enfants par classe.
+    </li><li>
+      <strong>Suppression de l&#39;accueil des touts petits</strong> (à partir de 2 ans), alors même que de nombreuses familles comptent inscrire leurs enfants en TPS en janvier 2018.
+    </li><li>
+      Passage à <strong>3 niveaux dans la seule classe de maternelle</strong>.
+    </li><li>
+      <strong>création d’une classe de "Grande Section" + CP</strong>, ce qui induirait que les Grands quitteraient la maternelle pour les locaux de l’élémentaire une année plus tôt, et rejoindraient de ce fait une classe qui n’appartient pas à leur cycle d’apprentissage.
+    </li><li>
+      Réduction du temps consacré aux <strong>élèves en difficulté</strong>.
+    </li><li>
+      Le <strong>départ inévitable d’une enseignante investie</strong> dans son métier, appréciée et reconnue tant par les parents que par ses élèves.
+    </li><li>
+      La commune a beaucoup investi dans la construction de deux classes en dur : comment justifier qu’un tel investissement ne soit pas pérennisé par l'etat ?  
+    </li><li>
+      Une école fait vivre un village : c’est le <strong>dynamisme entier du village qui est en jeu</strong>.
+    </li>
+    </ul>
+    <p>
+     Nous demandons donc à Monsieur le Directeur Académique des Services de l&#39;Education Nationale à revoir cette mesure, dans l&#39;intérêt de chaque enfant de cette école.
+    </p><p>
+      Nous refusons que nos enfants ne soient que seuils et statistiques.
+    </p><p>
+      Nous invitons le plus grand nombre à signer cette pétition, dont nous transmettrons une copie à Monsieur le Directeur Académique des Services de l&#39;Education Nationale.
+    </p>
+  </div>
+</div>
+
+<div class="text-center">
+    <a class="btn btn-lg btn-danger" href="<%= signature_path(@conn, :new) %>">Signer la pétition</a>
+</div>
+
+<br/>
+
+<div class="row center-block">
+  <div class="col-lg-10">
+    <p>
+    Voici la liste des personnes ayant déjà signés la pétition en ligne.
+    </p>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Prénom</th>
+          <th>Nom</th>
+        </tr>
+      </thead>
+      <tbody>
+    <%= for signature <- @signatures do %>
+        <tr>
+          <td><%= signature.firstname %></td>
+          <td><%= signature.lastname %></td>
+        </tr>
+    <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>
+

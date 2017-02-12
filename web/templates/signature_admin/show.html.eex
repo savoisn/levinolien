@@ -1,0 +1,28 @@
+<h2>Show signature</h2>
+
+<ul>
+
+  <li>
+    <strong>Firstname:</strong>
+    <%= @signature.firstname %>
+  </li>
+
+  <li>
+    <strong>Lastname:</strong>
+    <%= @signature.lastname %>
+  </li>
+
+  <li>
+    <strong>Email:</strong>
+    <%= @signature.email %>
+  </li>
+
+  <li>
+    <strong>Adress:</strong>
+    <%= @signature.adress %>
+  </li>
+
+</ul>
+
+<%= link "Edit", to: signature_admin_path(@conn, :edit, @signature) %>
+<%= link "Back", to: signature_admin_path(@conn, :index) %>

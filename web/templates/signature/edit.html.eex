@@ -1,0 +1,6 @@
+<h2>Edit signature</h2>
+
+<%= render "form.html", changeset: @changeset,
+                        action: signature_path(@conn, :update, @signature) %>
+
+<%= link "Back", to: signature_path(@conn, :index) %>

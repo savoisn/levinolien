@@ -1,0 +1,43 @@
+<div>
+<p>
+Votre adresse email ne sera jamais transmise, ni affichée sur le site.
+</p>
+<p>
+Elle n'est demandée que pour permettre à l'administrateur du site de vous contacter en cas de besoin.
+</p>
+</div>
+<%= form_for @changeset, @action, fn f -> %>
+  <%= if @changeset.action do %>
+    <div class="alert alert-danger">
+      <p>Oops, something went wrong! Please check the errors below.</p>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= label f, :firstname, "Prénom", class: "control-label" %>
+    <%= text_input f, :firstname, class: "form-control" %>
+    <%= error_tag f, :firstname %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :lastname, "Nom", class: "control-label" %>
+    <%= text_input f, :lastname, class: "form-control" %>
+    <%= error_tag f, :lastname %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :email, "Email", class: "control-label" %>
+    <%= text_input f, :email, class: "form-control" %>
+    <%= error_tag f, :email %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :adress, "Adresse", class: "control-label" %>
+    <%= text_input f, :adress, class: "form-control" %>
+    <%= error_tag f, :adress %>
+  </div>
+
+  <div class="form-group">
+    <%= submit "Valider", class: "btn btn-primary" %>
+  </div>
+<% end %>

@@ -1,0 +1,27 @@
+<h2>Show signature</h2>
+
+<ul>
+
+  <li>
+    <strong>Prénom:</strong>
+    <%= @signature.firstname %>
+  </li>
+
+  <li>
+    <strong>Nom:</strong>
+    <%= @signature.lastname %>
+  </li>
+
+  <li>
+    <strong>Email:</strong>
+    <%= @signature.email %>
+  </li>
+
+  <li>
+    <strong>Adresse:</strong>
+    <%= @signature.adress %>
+  </li>
+
+</ul>
+
+<%= link "Revenir a l'acceuil", to: page_path(@conn, :index) %>
