@@ -1,4 +1,5 @@
 #!/bin/bash
+npm install
 MIX_ENV=prod mix deps
 MIX_ENV=prod mix compile
 MIX_ENV=prod mix ecto.migrate 
