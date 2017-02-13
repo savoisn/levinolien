@@ -14,12 +14,9 @@ use Mix.Config
 
 config :appli, Appli.Endpoint,
   http: [port: {:system, "PORT"}],
-
-  url: [host: "localhost", port: 4000],
-  #cache_static_manifest: "priv/static/manifest.json",
-  #url: [scheme: "https", host: "levinolien.herokuapp.com", port: 443],
-  #force_ssl: [rewrite_on: [:x_forwarded_proto]],
-  #cache_static_manifest: "priv/static/manifest.json",
+  url: [scheme: "https", host: "levinolien.herokuapp.com", port: 443],
+  force_ssl: [rewrite_on: [:x_forwarded_proto]], 
+  cache_static_manifest: "priv/static/manifest.json",
   secret_key_base: System.get_env("SECRET_KEY_BASE")
 
 # Do not print debug messages in production
