@@ -19,6 +19,7 @@ defmodule Appli.Router do
     get "/", PageController, :index
     resources "/signatures", SignatureController
     resources "/signatures_admin", SignatureAdminController
+    resources "/.well-known/acme-challenge", WellknowController
   end
 
   # Other scopes may use custom stacks.
