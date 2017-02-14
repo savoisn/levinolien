@@ -6,6 +6,6 @@ defmodule Appli.WellknowController do
   end
 
   def show(conn, %{"id" => id}) do
-    text conn, "Hello World #{id}"
+    text conn, "#{id}"
   end
 end
