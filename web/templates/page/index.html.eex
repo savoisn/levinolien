@@ -51,10 +51,10 @@
 
 <br/>
 
-<div class="row center-block">
+<div class="center-block">
   <div class="col-lg-10">
     <p>
-    Voici la liste des personnes ayant déjà signés la pétition en ligne.
+    <span style="font-size:+5"><strong><%= length(@signatures) %></strong><span> personnes ont déjà signé cette pétition:
     </p>
     <table class="table">
       <thead>
@@ -72,6 +72,9 @@
     <% end %>
       </tbody>
     </table>
+  </div>
+  <div class="text-center col-lg-10">
+    Contactez nous a l'adresse suivante : <a href="mailto:levinolien@levinolien.fr">levinolien@levinolien.fr</a>
   </div>
 </div>
 
