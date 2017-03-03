@@ -9,9 +9,17 @@
 
     <title>Le Vinolien!</title>
     <link rel="stylesheet" href="<%= static_path(@conn, "/css/app.css") %>">
+    <link rel="stylesheet" href="<%= static_path(@conn, "/css/social-share-kit.css") %>">
   </head>
 
   <body>
+		<div class="ssk-sticky ssk-left ssk-center ssk-lg">
+			<a href="" class="ssk ssk-facebook"></a>
+			<a href="" class="ssk ssk-twitter"></a>
+			<a href="" class="ssk ssk-google-plus"></a>
+			<a href="" class="ssk ssk-tumblr"></a>
+			<a href="" class="ssk ssk-email"></a>
+		</div>
     <div class="container">
       <header>
         <nav role="navigation">
@@ -35,5 +43,26 @@
 
     </div> <!-- /container -->
     <script src="<%= static_path(@conn, "/js/app.js") %>"></script>
+    <script src="<%= static_path(@conn, "/js/social-share-kit.min.js") %>"></script>
+		<script type="text/javascript">
+
+				// Init Social Share Kit
+				SocialShareKit.init({
+						url: 'http://www.levinolien.fr',
+            text: 'Sauvons l\'ecole de Vineuil St Firmin, signer notre petition',
+						twitter: {
+								title: 'Le vinolien'
+						},
+						onBeforeOpen: function(targetElement, network, paramsObj){
+								console.log(arguments);
+						},
+						onOpen: function(targetElement, network, url, popupWindow){
+								console.log(arguments);
+						},
+						onClose: function(targetElement, network, url, popupWindow){
+								console.log(arguments);
+						}
+				});
+		</script>
   </body>
 </html>
