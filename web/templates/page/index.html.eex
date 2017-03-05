@@ -52,29 +52,37 @@
 <br/>
 
 <div class="center-block">
-  <div class="col-lg-10">
-    <p>
-    <span style="font-size:+5"><strong><%= length(@signatures) %></strong><span> personnes ont déjà signé cette pétition:
-    </p>
-    <table class="table">
-      <thead>
-        <tr>
-          <th>Prénom</th>
-          <th>Nom</th>
-        </tr>
-      </thead>
-      <tbody>
-    <%= for signature <- @signatures do %>
-        <tr>
-          <td><%= signature.firstname %></td>
-          <td><%= signature.lastname %></td>
-        </tr>
-    <% end %>
-      </tbody>
-    </table>
-  </div>
-  <div class="text-center col-lg-10">
-    Contactez nous a l'adresse suivante : <a href="mailto:levinolien@levinolien.fr">levinolien@levinolien.fr</a>
+  <div class="row">
+    <div class="col-lg-10">
+      <p>
+      <span style="font-size:+5"><strong><%= length(@signatures) %></strong><span> personnes ont déjà signé cette pétition:
+      </p>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Prénom</th>
+            <th>Nom</th>
+          </tr>
+        </thead>
+        <tbody>
+      <%= for signature <- @signatures do %>
+          <tr>
+            <td><%= signature.firstname %></td>
+            <td><%= signature.lastname %></td>
+          </tr>
+      <% end %>
+        </tbody>
+      </table>
+    </div>
+    <div class="col-lg-12">
+      <a href="<%= papers_path(@conn, :index) %>">Voir les petitions papier</a>
+    </div>
+    <div class="text-center col-lg-12">
+      <br/>
+    </div>
+    <div class="text-center col-lg-12">
+      Contactez nous a l'adresse suivante : <a href="mailto:levinolien@levinolien.fr">levinolien@levinolien.fr</a>
+    </div>
   </div>
 </div>
 

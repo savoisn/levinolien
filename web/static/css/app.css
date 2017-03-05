@@ -1,1 +1,7 @@
 /* This file is for your main application css. */
+.papersThumbnail{
+  height:300px;
+} 
+.paperLabel{
+  text-align:center;
+}

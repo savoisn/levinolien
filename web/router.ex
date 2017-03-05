@@ -17,6 +17,7 @@ defmodule Appli.Router do
     pipe_through :browser # Use the default browser stack
 
     get "/", PageController, :index
+    get "/papers", PapersController, :index
     resources "/signatures", SignatureController
     resources "/signatures_admin", SignatureAdminController
     resources "/.well-known/acme-challenge", WellknowController
