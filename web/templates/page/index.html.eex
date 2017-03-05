@@ -43,6 +43,9 @@
       Nous invitons le plus grand nombre à signer cette pétition, dont nous transmettrons une copie à Monsieur le Directeur Académique des Services de l&#39;Education Nationale.
     </p>
   </div>
+  <div>
+    <a href="<%= papers_path(@conn, :index) %>">Voir les petitions papier</a>
+  </div>
 </div>
 
 <div class="text-center">
