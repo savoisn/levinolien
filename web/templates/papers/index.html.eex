@@ -1,114 +1,23 @@
 <div class="row marketing" style="">
+
+  <div col-md-12>
+    nombre total de signatures sur papiers : 
+      <%= Enum.reduce(@papers , 0, fn(paper, acc) -> paper.nb + acc end )  %>
+  </div>
+
+  <br/>
+    <%= for paper <- @papers do %>
   <div class="col-md-4">
     <div>
       <div class="paperLabel">
-        <a href="images/papers/signatures_papier_1.jpg">
-          <img class="papersThumbnail" src="images/papers/signatures_papier_1.jpg"/>
+        <a href="<%= paper.url %>">
+          <img class="papersThumbnail" src="<%= paper.url %>"/>
         </a>
       </div>
       <div class="paperLabel">
-        18 signatures
+        <%= paper.nb %> signatures
       </div>
     </div>
   </div>
-  <div class="col-md-4">
-    <div>
-      <div class="paperLabel">
-        <a href="images/papers/signatures_papier_2.jpg">
-          <img class="papersThumbnail" src="images/papers/signatures_papier_2.jpg"/>
-        </a>
-      </div>
-      <div class="paperLabel">
-        15 signatures
-      </div>
-    </div>
-  </div>
-  <div class="col-md-4">
-    <div>
-      <div class="paperLabel">
-        <a href="images/papers/signatures_papier_3.jpg">
-          <img class="papersThumbnail" src="images/papers/signatures_papier_3.jpg"/>
-        </a>
-      </div>
-      <div class="paperLabel">
-        20 signatures
-      </div>
-    </div>
-  </div>
-</div>
-<div class="row marketing" style="">
-  <div class="col-md-4">
-    <div>
-      <div class="paperLabel">
-        <a href="images/papers/signatures_papier_4.jpg">
-          <img class="papersThumbnail" src="images/papers/signatures_papier_4.jpg"/>
-        </a>
-      </div>
-      <div class="paperLabel">
-        16 signatures
-      </div>
-    </div>
-  </div>
-  <div class="col-md-4">
-    <div>
-      <div class="paperLabel">
-        <a href="images/papers/signatures_papier_5.jpg">
-          <img class="papersThumbnail" src="images/papers/signatures_papier_5.jpg"/>
-        </a>
-      </div>
-      <div class="paperLabel">
-        13 signatures
-      </div>
-    </div>
-  </div>
-  <div class="col-md-4">
-    <div>
-      <div class="paperLabel">
-        <a href="images/papers/signatures_papier_6.jpg">
-          <img class="papersThumbnail" src="images/papers/signatures_papier_6.jpg"/>
-        </a>
-      </div>
-      <div class="paperLabel">
-        22 signatures
-      </div>
-    </div>
-  </div>
-</div>
-<div class="row marketing" style="">
-  <div class="col-md-4">
-    <div>
-      <div class="paperLabel">
-        <a href="images/papers/signatures_papier_7.jpg">
-          <img class="papersThumbnail" src="images/papers/signatures_papier_7.jpg"/>
-        </a>
-      </div>
-      <div class="paperLabel">
-        18 signatures
-      </div>
-    </div>
-  </div>
-  <div class="col-md-4">
-    <div>
-      <div class="paperLabel">
-        <a href="images/papers/signatures_papier_8.jpg">
-          <img class="papersThumbnail" src="images/papers/signatures_papier_8.jpg"/>
-        </a>
-      </div>
-      <div class="paperLabel">
-        13 signatures
-      </div>
-    </div>
-  </div>
-  <div class="col-md-4">
-    <div>
-      <div class="paperLabel">
-        <a href="images/papers/signatures_papier_9.jpg">
-          <img class="papersThumbnail" src="images/papers/signatures_papier_9.jpg"/>
-        </a>
-      </div>
-      <div class="paperLabel">
-        22 signatures
-      </div>
-    </div>
-  </div>
+    <%= end %>
 </div>
