@@ -19,7 +19,7 @@ defmodule Appli.Router do
     get "/", PageController, :index
     get "/papers", PapersController, :index
     resources "/signatures", SignatureController
-    resources "/signatures_admin", SignatureAdminController
+    # resources "/signatures_admin", SignatureAdminController
     resources "/.well-known/acme-challenge", WellknowController
   end
 

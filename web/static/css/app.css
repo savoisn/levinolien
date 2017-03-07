@@ -5,3 +5,16 @@
 .paperLabel{
   text-align:center;
 }
+
+header a:link{
+  color: green;
+}
+header a:visited{
+  color: green;
+}
+header a:hover{
+  color: green;
+}
+header a:active {
+  color: green;
+}
