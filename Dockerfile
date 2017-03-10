@@ -21,4 +21,4 @@ ADD . .
 RUN brunch build --production && \
     mix do compile, phoenix.digest
 
-CMD ./entrypoint.sh
+CMD sh ./entrypoint.sh
