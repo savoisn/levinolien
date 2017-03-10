@@ -24,8 +24,8 @@ config :logger, level: :info
 # Configure your database
 config :appli, Appli.Repo,
   adapter: Ecto.Adapters.Postgres,
-  url: System.get_env("DATABASE_URL"),
-  pool_size: String.to_integer(System.get_env("POOL_SIZE") || "10"),
+  url: System.get_env("POSTGRESQL_ADDON_URI"),
+  pool_size: String.to_integer(System.get_env("POOL_SIZE") || "4")
 
 
 # ## SSL Support
