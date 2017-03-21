@@ -12,6 +12,7 @@ defmodule Appli.PapersController do
       %{:url => "images/papers/signatures_papier_7.jpg", :nb => 18},
       %{:url => "images/papers/signatures_papier_8.jpg", :nb => 13},
       %{:url => "images/papers/signatures_papier_9.jpg", :nb => 22},
+      %{:url => "images/papers/signatures_papier_10.jpg", :nb => 18},
     ]
   end 
 
